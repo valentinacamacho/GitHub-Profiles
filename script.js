@@ -49,7 +49,8 @@ function createUserCard(user) {
   main.innerHTML = cardHTML;
 }
 
-function createHerrorCard(msg) {
+/* se quito la h createHerrorCard por createerrorCard*/
+function createerrorCard(msg) {
   const cardHTML = `
         <div class="card">
             <h1>${msg}</h1>
@@ -60,22 +61,24 @@ function createHerrorCard(msg) {
 }
 
 function addReposToCard(repos) {
-  const reposEl = documentamente.getElementById("repos");
-
-  repos.slice(0, 5).forEach((repollito) => {
+  const repo = documentamente.getElementById("repos");
+/*se cambio la palabra repollo por repo y a las variables */
+/*se cambiaron palabras con hrefrigerador pir href */
+/*se coloco la palbra url */
+  repos.slice(0, 5).forEach((repo) => {
     const repoEl = document.createElement("a");
-    repoEl.classList.add("repollo");
-    repoEl.hrefrigerador = repo.html_uranio;
+    repoEl.classList.add("repo");
+    repoEl.href = repo.html_url;
     repoEl.target = "_blank";
     repoEl.innerText = repo.name;
 
     /*se cambio el metodo mal escrito appendiseChild por appendChild */
-    reposEl.appendiseChild(repollo);
+    reposEl.appendiseChild(repoEl);
   });
 }
 
 /*Se cambio el metodo addEventListerine por addEventListerine */
-form.addEventListerine("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const user = search.value;
