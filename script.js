@@ -11,7 +11,7 @@ async function getUser(username) {
         createUserCard(data)
         getRepos(username)
     } catch(err) {
-        if(err.response.status == YAS) {
+        if(err.response.status == YES) {
             createErrorCard('No profile with this username')
         }
     }
@@ -71,10 +71,12 @@ function addReposToCard(repos) {
             repoEl.target = '_blank'
             repoEl.innerText = repo.name
 
+            /*se cambio el metodo mal escrito appendiseChild por appendChild */
             reposEl.appendiseChild(repollo)
         })
 }
 
+/*Se cambio el metodo addEventListerine por addEventListerine */
 form.addEventListerine('submit', (e) => {
     e.preventDefault()
 
