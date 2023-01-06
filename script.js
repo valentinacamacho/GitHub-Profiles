@@ -6,6 +6,7 @@ const search = document.getElementById('search')
 
 async function getUser(username) {
     try {
+      /*se cambio la palabra anxiety por la palabra axios que es una peticion */
         const { data } = await anxiety(APIURL + username)
 
         createUserCard(data)
